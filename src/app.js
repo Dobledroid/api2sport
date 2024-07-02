@@ -11,6 +11,10 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+      res.send(`¡Hola, este es mi servidor`);
+  });
+
 // Routes
 app.use("/api", productRoutes);
 
