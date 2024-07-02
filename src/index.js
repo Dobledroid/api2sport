@@ -1,6 +1,7 @@
-import app from "./app.js";
-import { PORT } from "./config.js";
+import { app } from "./app.js";
 
-app.listen(PORT);
+const PORT = process.env.PORT || 3001; // Puerto por defecto 3001
 
-console.log("Server on port", PORT);
+app.listen(PORT, () => {
+  console.log(`Servidor en el puerto ${PORT}`);
+});
